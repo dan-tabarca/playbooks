@@ -1,5 +1,5 @@
 --- # RUNONCE PLAYBOOK EXAMPLE
-- hosts: all
+- hosts: localhost
   sudo: yes
   connection: ssh
   gather_facts: no
