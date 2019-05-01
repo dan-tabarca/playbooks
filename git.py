@@ -11,7 +11,6 @@ def git():
     subprocess.call(["git", "add", "."])
     message = raw_input("Commit your message: ")
     subprocess.call(["git", "commit", "-m", message])
-    subprocess.Popen(["git", "push"])
-    print("\n")
+    subprocess.call(["git", "push"])
 
 git()
