@@ -5,13 +5,11 @@ import subprocess
 # git config --global credential.helper 'cache --timeout 36000'
 # git push https://github.com/dan-tabarca/playbooks.git
 
-#subprocess.call(["git", "config", "credential.helper", "store"])
-#subprocess.call(["git", "config", "--global", "credential.helper 'cache --timeout 36000'"])
 def prereq(): 
     req = subprocess.Popen(["git", "config", "--global", "credential.helper"], stdout=subprocess.PIPE)
     if not 'cache --timeout' in req.communicate()[0]:
         subprocess.call(["git", "config", "credential.helper", "store"])
-        subprocess.call(["git", "config", "--global", "credential.helper", "'cache --timeout 36000'"])
+        subprocess.call(["git", "config", "global", "credential.helper", "'cache --timeout 36000'"])
         subprocess.call(["git", "push", "https://github.com/dan-tabarca/playbooks.git"])
 
 def git():
