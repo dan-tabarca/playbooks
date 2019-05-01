@@ -2,7 +2,8 @@ import subprocess
 
 # If the cache is gone, type manually: 
 # git config credential.helper store
-# git push https://github.com/repo.git
+# git config --global credential.helper 'cache --timeout 36000'
+# git push https://github.com/dan-tabarca/playbooks.git
 
 #subprocess.call(["git", "config", "credential.helper", "store"])
 #subprocess.call(["git", "config", "--global", "credential.helper 'cache --timeout 36000'"])
