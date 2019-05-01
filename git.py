@@ -7,6 +7,12 @@ import subprocess
 
 #subprocess.call(["git", "config", "credential.helper", "store"])
 #subprocess.call(["git", "config", "--global", "credential.helper 'cache --timeout 36000'"])
+
+req = subprocess.Popen(["git", "config", "--global", "credential.helper"], stdout=subprocess.PIPE)
+if 'cache timeout' in req.communicate()[0]:
+   print("bravo boss")
+
+
 def git():
     subprocess.call(["git", "add", "."])
     message = raw_input("Commit your message: ")
