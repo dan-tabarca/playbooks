@@ -1,5 +1,5 @@
 --- # RUNONCE PLAYBOOK EXAMPLE
-- hosts: localhost
+- hosts: 34.244.223.174
   user: ansible
   sudo: yes
   connection: ssh
